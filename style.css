@@ -365,9 +365,9 @@ footer{background:var(--bg2);padding:2.5rem 5vw;display:grid;grid-template-colum
   .ann-inner{padding:1rem .5rem 1.5rem}
   .ann-pat-wrap{width:96px;height:96px}
   .ann-patterns{grid-template-columns:repeat(3,1fr);gap:1.2rem .6rem}
-  .ann-pat{max-width:110px;gap:.6rem}
+  .ann-pat{max-width:110px;min-width:0;gap:.6rem}
   .ann-pat-color{font-size:.62rem;padding:.26rem .65rem;letter-spacing:.03em}
-  .ann-pat-name{font-size:.58rem;padding:.22rem .6rem}
+  .ann-pat-name{max-width:100%;font-size:.58rem;padding:.22rem .6rem;white-space:normal;line-height:1.2}
   .ann-sub{margin-bottom:1rem;font-size:.88rem}
   .ann-season{font-size:clamp(1.4rem,5vw,2rem)}
   .ann-btn{padding:.75rem 1.8rem;font-size:.9rem}
@@ -384,6 +384,9 @@ footer{background:var(--bg2);padding:2.5rem 5vw;display:grid;grid-template-colum
   .foot-contact .btn{width:100%;text-align:center}
   .about-badges{gap:.5rem}
   .badge{font-size:.8rem;padding:.38rem .9rem}
+}
+@media(max-width:375px){
+  #collections .sh{max-width:10em}
 }
 /* Very small mobile */
 @media(max-width:360px){
