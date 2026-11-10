@@ -49,8 +49,20 @@ h1,h2,h3{line-height:1.15;font-weight:800}
 #ann[hidden]{display:none!important}
 .ann-inner{max-width:680px;width:100%;text-align:center;padding-bottom:1.5rem}
 .ann-header{display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:.5rem}
-.ann-season{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;letter-spacing:.08em;background:linear-gradient(90deg,#FF85B3,#C07AFF,#7AC8FF,#5FDFAA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;padding:.3rem 1.8rem;border:3px solid transparent;border-radius:999px;background-clip:text;position:relative}
-.ann-season::before{content:'';position:absolute;inset:0;border-radius:999px;padding:3px;background:linear-gradient(90deg,#FF85B3,#C07AFF,#7AC8FF);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.ann-season{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;letter-spacing:.08em;background:linear-gradient(90deg,#FF85B3,#C07AFF,#7AC8FF,#5FDFAA);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;padding:.3rem 1.8rem;border:3px solid transparent;border-radius:999px;position:relative}
+.ann-season::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  padding:3px;
+  background:linear-gradient(90deg,#FF85B3,#C07AFF,#7AC8FF);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask-composite:exclude;
+  pointer-events:none;
+}
 .ann-deco{font-size:1.6rem;color:#C07AFF;animation:ann-spin 4s linear infinite;display:inline-block}
 @keyframes ann-spin{to{transform:rotate(360deg)}}
 .ann-sub{font-size:1rem;color:#7A6880;margin-bottom:2rem;font-weight:500;letter-spacing:.04em}
