@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HONCHO BABY — Little moments, big memories.</title>
+<meta name="description" content="HONCHO BABY: baby clothing, baby essentials, blankets and children's books.">
+<script>try{var t=localStorage.getItem('hb-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div id="loader" role="status" aria-label="Loading HONCHO BABY">
+  <div class="ld-logo-reveal">
+    <img src="LOGO.jpeg" alt="HONCHO BABY">
+  </div>
+</div>
+
+<!-- ===== ANNOUNCEMENT SCREEN ===== -->
+<div id="ann" aria-label="Season 10 Announcement" hidden>
+  <div class="ann-inner">
+    <div class="ann-header">
+      <span class="ann-deco">✦</span>
+      <div class="ann-season">SEASON — 10</div>
+      <span class="ann-deco">✦</span>
+    </div>
+    <p class="ann-sub">New colours &amp; patterns have arrived</p>
+    <div class="ann-patterns" id="annPatterns"></div>
+    <button class="ann-btn" id="annContinue">CONTINUE TO WEBSITE</button>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="nav" id="top">
+  <!-- Left: Logo circle — replace src with your actual logo image -->
+  <a href="#home" class="nav-logo" aria-label="HONCHO BABY Home">
+    <div class="logo-circle">
+      <img src="LOGO.jpeg" alt="HONCHO BABY Logo">
+    </div>
+  </a>
+
+  <!-- Center: Brand name -->
+  <a href="#home" class="nav-brand">HONCHO <span>BABY</span></a>
+
+  <!-- Right: Nav buttons + tools -->
+  <div class="nav-right">
+    <nav id="menu" aria-label="Main">
+      <a href="#home" class="nav-btn pink">Home</a>
+      <a href="#collections" class="nav-btn blue">Collection</a>
+      <a href="#about" class="nav-btn pink">About</a>
+      <a href="#contact" class="nav-btn blue">Contact</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">
+        <span class="sun-icon">☀️</span><span class="moon-icon">🌙</span>
+      </button>
+      <button class="icon-btn burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+  <div class="hero-text">
+    <h2>Little moments, big memories.</h2>
+    <p>Soft baby clothing, everyday essentials, cosy blankets — thoughtfully gathered for the smallest members of your family.</p>
+    <a class="btn" href="#collections">Explore Collections</a>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <!-- ADD PHOTO: Hero image → assets/hero.jpg -->
+    <div class="hero-card">
+      <div class="ph"><span>📷</span><b>Hero photo</b><small>assets/hero.jpg</small></div>
+      <img src="Hero.jpeg" alt="Baby clothing and lifestyle" onerror="this.remove()">
+    </div>
+  </div>
+</section>
+
+<!-- ===== PURPLE WAVE ===== -->
+<div class="wave-purple" aria-hidden="true">
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 40 C200 90 400 10 600 50 C800 90 1000 20 1200 55 C1320 75 1400 45 1440 35 L1440 100 L0 100 Z" fill="var(--wave-purple)"/>
+  </svg>
+</div>
+
+<!-- ===== EMOJI FLOAT STRIP ===== -->
+<div class="wave" aria-hidden="true">
+  <span class="fl f1">👕</span><span class="fl f2">👗</span><span class="fl f3">🧦</span><span class="fl f4">👚</span><span class="fl f5">🧸</span>
+</div>
+
+<!-- ===== FEATURED COLLECTIONS ===== -->
+<section class="sec alt" id="collections">
+  <h2 class="sh">Featured collections</h2>
+  <div class="coll-grid" id="collGrid"></div>
+</section>
+
+<!-- ===== ALL PRODUCTS ===== -->
+<section class="sec" id="products">
+  <h2 class="sh">Our Products</h2>
+
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>No products match your search.</p>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="sec alt about-sec" id="about">
+  <div class="about-inner">
+    <h2 class="sh">About Honcho Baby</h2>
+    <div class="about-body">
+      <p>At Honcho Baby, we believe every moment of childhood is magical and deserves the softest, safest, and most comfortable care. Since 2020, we have been dedicated to creating thoughtfully designed essentials for babies aged 0 months to 5 years. Whether you are exploring baby clothes online or searching for the perfect newborn essentials, we bring you a collection crafted with love and expertise.</p>
+      <p>From adorable rompers and cotton frocks to full sleeve, half sleeve, and sleeveless outfits, our range is designed to keep your little one comfortable throughout the day. We also offer essentials like baby mittens, booties, and bath-time products that ensure complete care for your baby.</p>
+      <div class="about-badges">
+        <span class="badge">🌸 Since 2020</span>
+        <span class="badge">👶 Ages 0–5 Years</span>
+        <span class="badge">💛 Made with Love</span>
+        <span class="badge">🧸 Safe &amp; Soft</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contact">
+  <div class="foot-brand">
+    <div class="logo-circle small">
+      <img src="LOGO.jpeg" alt="HONCHO BABY" loading="lazy" onerror="this.remove()">
+    </div>
+    <div>
+      <div class="nav-brand foot-logo">HONCHO <span>BABY</span></div>
+      <p>Little moments, big memories.</p>
+    </div>
+  </div>
+  <div class="foot-links">
+    <a href="#products">All Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="foot-contact">
+    <a class="btn small" target="_blank" rel="noopener" href="https://wa.me/919659066605?text=Hello%20Honcho%20Baby!%20I%20would%20like%20to%20know%20more%20about%20your%20products.">💬 WhatsApp Us</a>
+    <!-- Google Maps location -->
+    <a class="btn small ghost" target="_blank" rel="noopener" href="https://share.google/q1h2uOydfQJVjwLXs">📍 Find Us / View Location</a>
+  </div>
+  <p class="copy">© <span id="yr"></span> HONCHO BABY. All rights reserved.</p>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a class="wa-float" href="https://wa.me/919659066605?text=Hello%20Honcho%20Baby!%20I%20would%20like%20to%20know%20more%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="16" cy="16" r="16" fill="#25D366"/>
+    <path d="M23.5 8.5A10.44 10.44 0 0 0 16 5.5C10.2 5.5 5.5 10.2 5.5 16c0 1.85.49 3.65 1.41 5.24L5.5 26.5l5.4-1.4A10.44 10.44 0 0 0 16 26.5c5.8 0 10.5-4.7 10.5-10.5 0-2.8-1.09-5.43-3-7.5zm-7.5 16.15a8.67 8.67 0 0 1-4.42-1.21l-.32-.19-3.2.84.85-3.12-.21-.33A8.68 8.68 0 1 1 16 24.65zm4.77-6.5c-.26-.13-1.54-.76-1.78-.85-.24-.09-.41-.13-.58.13-.17.26-.66.85-.81 1.02-.15.17-.3.19-.56.06-.26-.13-1.1-.41-2.1-1.3-.78-.7-1.3-1.56-1.45-1.82-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.5-.43-.43-.58-.44h-.5c-.17 0-.45.06-.69.32-.24.26-.9.88-.9 2.14s.92 2.48 1.05 2.65c.13.17 1.81 2.76 4.38 3.87.61.26 1.09.42 1.46.54.61.19 1.17.16 1.61.1.49-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.11-.24-.17-.5-.3z" fill="#fff"/>
+  </svg>
+</a>
+
+<!-- ===== MODAL ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="m-box"><button class="m-close" id="mClose" aria-label="Close">✕</button><div id="mBody"></div></div>
+</div>
+
+</body>
+</html>
